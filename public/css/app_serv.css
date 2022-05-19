@@ -1,0 +1,36 @@
+
+.formOrderBlock .title,
+.formOrderBlock,
+.buttonRegister {
+    align-content: baseline;
+    display: flex;
+    flex-wrap: wrap;
+}
+.buttonRegister {
+    align-content: baseline;
+    background-color: rgb(31 41 55);
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    justify-content: flex-start;
+    padding: 10px 15px;
+    text-transform: uppercase;
+}
+.formOrderBlock {
+    font-size: 12px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 500px;
+    width: 100%;
+}
+.formOrderBlock .title {
+    font-size: 16px;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.formOrderBlock form {
+    width: 100%;
+}

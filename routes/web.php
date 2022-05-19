@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\OrderSend;
+use App\Http\Controllers\PostControler;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('mainPage');
 })->middleware(['auth'])->name('welcome');;
 
 Route::get('/dashboard', function () {
@@ -31,6 +33,10 @@ Route::get('/roles', function () {
         'roles' => $currentUser->roles
     ]);
     return $rolesJson;
-})->middleware(['auth'])->name('roles');;
+})->middleware(['auth'])->name('roles');
+
+Route::post('/', [OrderSend::class, 'store'])->name('OrderSend');
+
+Route::resource('post', \App\Http\Controllers\PostController::class);
 
 require __DIR__.'/auth.php';
