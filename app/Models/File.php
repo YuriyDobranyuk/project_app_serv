@@ -10,6 +10,11 @@ class File extends Model
     use HasFactory;
     protected $fillable = [
         'name',
-        'file_path'
+        'old_name',
+        'file_path',
+        'size'
     ];
+    public function users(){
+        return $this->belongsToMany(File::class, 'users_files', 'fileId', 'userId');
+    }
 }

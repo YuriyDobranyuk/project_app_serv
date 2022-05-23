@@ -1,4 +1,8 @@
 
+.tablePost .mainBlockTable .elementPost,
+.tablePost .mainBlockTable,
+.tablePost .titlesTable,
+.tablePost,
 .formOrderBlock .title,
 .formOrderBlock,
 .buttonRegister {
@@ -31,6 +35,22 @@
     margin-bottom: 20px;
     width: 100%;
 }
+.tablePost .mainBlockTable .elementPost,
+.tablePost .mainBlockTable,
+.tablePost .titlesTable,
+.tablePost,
 .formOrderBlock form {
     width: 100%;
+}
+.tablePost {
+    margin: 20px 0;
+}
+.tablePost .mainBlockTable .elementPost,
+.tablePost .titlesTable {
+    justify-content: space-between;
+}
+.tablePost .mainBlockTable .elementPost > div,
+.tablePost .titlesTable > div {
+    text-align: center;
+    width: calc(100%/6);
 }

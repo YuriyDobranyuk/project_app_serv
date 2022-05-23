@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('orders_user', function (Blueprint $table) {
             $table->unsignedBigInteger('userId');
             $table->unsignedBigInteger('orderId');
-            $table->unique('userId','orderId');
+            $table->unique('orderId');
             $table->foreign('userId')->references('id')->on('users');
             $table->foreign('orderId')->references('id')->on('orders');
         });
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('orders_user');
     }
 };

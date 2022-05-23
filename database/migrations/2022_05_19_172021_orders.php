@@ -18,11 +18,8 @@ return new class extends Migration
             $table->string('topic');
             $table->mediumText('message');
             $table->boolean('verified')->default(0);
-            $table->unsignedBigInteger('userId');
             $table->unsignedBigInteger('fileId');
             $table->timestamps();
-            $table->foreign('userId')->references('id')->on('users');
-            $table->foreign('fileId')->references('id')->on('files');
         });
     }
 

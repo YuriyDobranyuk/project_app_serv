@@ -35,7 +35,8 @@ Route::get('/roles', function () {
     return $rolesJson;
 })->middleware(['auth'])->name('roles');
 
-Route::post('/', [OrderSend::class, 'store'])->name('OrderSend');
+//Route::post('/', [OrderSend::class, 'store'])->name('OrderSend');
+//Route::post('/post/store', [\App\Http\Controllers\PostController::class, 'store'])->name('post.store');
 
 Route::resource('post', \App\Http\Controllers\PostController::class);
 

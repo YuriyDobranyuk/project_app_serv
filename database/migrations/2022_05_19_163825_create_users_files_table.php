@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('users_files', function (Blueprint $table) {
             $table->unsignedBigInteger('userId');
             $table->unsignedBigInteger('fileId');
-            $table->unique('userId','fileId');
+            $table->unique('fileId');
             $table->foreign('userId')->references('id')->on('users');
             $table->foreign('fileId')->references('id')->on('files');
         });
